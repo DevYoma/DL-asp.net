@@ -1,0 +1,42 @@
+.logsPage{
+    min-height: 100vh;
+    background: white;
+
+    select{
+        // border: 1px solid red;
+        display: flex;
+        margin: 1rem 1rem 0 auto;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    &Main{
+        max-width: 1300px;
+        margin-inline: auto;
+        min-height: 100vh;
+        background: #F9FAFB;
+
+        &Content{
+            // border: 1px solid red;
+            padding: 2rem 1rem 3rem ;
+
+            &Item{
+                margin-bottom: 1rem;
+                border: 1px solid #D0D5DD;
+                padding: 1rem 1.75rem;
+                border-radius: 10px;
+
+                pre{
+                    white-space: pre-wrap;  
+                    word-wrap: break-word;       
+                    overflow-wrap: break-word;
+                    max-width: 100%;     
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+    }
+    
+}

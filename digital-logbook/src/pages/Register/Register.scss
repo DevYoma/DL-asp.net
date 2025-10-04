@@ -1,0 +1,82 @@
+#registerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register{
+    width: 518px;
+    background: white;
+    color: black;
+    padding: 2rem 1.75rem; 
+    border-radius: 10px;
+
+    @media screen and (max-width: 500px){
+        width: 90%;
+    }
+
+    &Header{
+    }
+
+    &Text{
+        margin: 24px 0;
+        color: #667185;
+        font-weight: 500;
+    }
+
+    &Form{
+        width: 100%;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+
+        & > div{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 14px;
+                color: #101928;
+                font-weight: 700;
+            }
+
+            input{
+                margin-top: 5px;
+            }
+
+            &:not(:last-of-type){
+                // border: 1px solid red;
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        input{
+            // margin: 1rem 0;
+            padding: 0.5rem;
+            // border: 1px solid var(--primary-color);
+            // outline: 1px solid hsl(203, 30%, 26%);
+            outline: inherit;
+            border-radius: 5px;
+
+            &:not(:placeholder-shown):valid{
+                border: 2px solid lightgreen;   
+            }
+
+            &:not(:placeholder-shown):invalid{
+                border: 2px solid red;
+            }
+
+            &:focus:invalid{
+                // outline-color: 2px solid orange;
+                border: 2px solid orange;
+            }
+        }
+    }
+
+    &Question{
+        text-align: center;
+        font-weight: bold;
+        color: #667185;
+    }
+}
