@@ -1,0 +1,17 @@
+.env
+
+# Build outputs
+/bin/
+/obj/
+
+/*.user
+/*.suo
+/*.userprefs
+
+# VS files
+.vs
+.vscode/
+*.launch.json
+
+# Ignore the Supabase service (contains credentials temporarily)
+Services/SupabaseService.cs
