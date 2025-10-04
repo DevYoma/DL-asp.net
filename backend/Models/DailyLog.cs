@@ -1,13 +1,19 @@
+using Supabase.Postgrest.Models;
+using Supabase.Postgrest.Attributes;
 using System;
 
 namespace DigitalLogbookAPI.Models
 {
-    public class DailyLog
+    [Table("dailyLogs")]
+    public class DailyLog : BaseModel
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        [PrimaryKey("id", false)]
+        public int Id { get; set; }
+
+        [Column("text")]
         public string Text { get; set; } = string.Empty;
-        public Guid UserId { get; set; } // foreign key
-        public DateTime Date { get; set; } = DateTime.UtcNow.Date;
+
+        [Column("date")]
+        public DateTime Date { get; set; }
     }
 }
